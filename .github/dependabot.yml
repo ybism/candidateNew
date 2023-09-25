@@ -1,0 +1,17 @@
+version: 2
+registries:
+  nuget:
+    type: nuget-feed
+    url: https://api.nuget.org/v3/index.json
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/"
+    registries:
+      - nuget
+    schedule:
+      interval: "daily"
+      time: "07:00"
+      timezone: "Europe/London" 
+    assignees:
+      - "principal-engineering"
+    open-pull-requests-limit: 20
